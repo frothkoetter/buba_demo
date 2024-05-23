@@ -5,7 +5,7 @@ from great_expectations.dataset.sparkdf_dataset import SparkDFDataset
 
 # parse job configuration
 config = configparser.ConfigParser()
-config.read("/app/mount/parameters.conf")
+config.read("/app/mount/resources_files/parameters.conf")
 s3BucketName = config.get("general", "s3BucketName")
 USERNAME = config.get("general", "username")
 print(f"RUNNING AS USERNAME: {USERNAME}")

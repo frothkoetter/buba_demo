@@ -7,7 +7,7 @@ spark = SparkSession.builder.appName("CREATE").getOrCreate()
 
 # parse job configuration
 config = configparser.ConfigParser()
-config.read("/app/mount/parameters.conf")
+config.read("/app/mount/resources_files/parameters.conf")
 S3_BUCKET = config.get("general", "s3BucketName")
 USERNAME = config.get("general", "username")
 print(f"RUNNING AS USERNAME: {USERNAME}")
